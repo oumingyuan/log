@@ -129,8 +129,8 @@ DATABASES = {
         'NAME': 'log',
 
         # 'HOST': 'localhost',
-        'HOST': '120.79.223.29',
-        # 'HOST': '120.79.195.187',
+        # 'HOST': '120.79.223.29',
+        'HOST': '120.79.195.187',
         'PORT': '3306',
         'USER': 'root',
         'PASSWORD': 'new_password',
