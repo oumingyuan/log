@@ -84,8 +84,8 @@ def get_and_insert_log():
     # 打印时间
     day_today = datetime.today()
 
-    logging.basicConfig(filename='example.log', filemode="a", level=logging.DEBUG,
-                        format='%(asctime)s - %(levelname)s - %(message)s')
+    # logging.basicConfig(filename='example.log', filemode="a", level=logging.DEBUG,
+    #                     format='%(asctime)s - %(levelname)s - %(message)s')
 
     weekday = day_today.weekday()
 

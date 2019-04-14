@@ -229,4 +229,5 @@ EMAIL_HOST_PASSWORD = 'ming15555136971'
 # 收件人看到的发件人 <此处要和发送邮件的邮箱相同>
 EMAIL_FROM = '13336980260@163.com'
 
+# noinspection PyUnresolvedReferences
 STATIC_ROOT = '/root/static/'
