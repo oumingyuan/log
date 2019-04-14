@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆</title>
+
+    <style>
+
+        fieldset {
+            margin: 100px auto;
+            float: none;
+            width: 400px;
+            height: 250px;
+
+
+        }
+
+        label {
+
+            margin: 1500px auto;
+
+        }
+
+        /*style="border-width: 1px; border-color: #008000; width:400px; height:220px"*/
+
+        fieldset {
+            background: rgba(255, 255, 255, .3);
+            border-color: rgba(255, 255, 255, .6);
+            border-style: solid;
+            border-width: 2px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            line-height: 30px;
+            list-style: none;
+            padding: 5px 10px;
+            margin-bottom: 2px;
+            border-color: #008000; /*边框颜色*/
+        }
+
+
+        fieldset legend {
+            color: #302A2A;
+            font: bold 16px/2 Verdana, Geneva, sans-serif;
+            text-align: left;
+            text-shadow: 2px 2px 2px rgb(88, 126, 156);
+        }
+
+    </style>
+</head>
+<body>
+<form action="/login/login/" method="post">
+    <fieldset>
+
+        <legend>用户登录</legend>
+
+        <table align="center">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="name">用户名称</label></td>
+                <td><input id="name" type="text" required="required" maxlength="20" name="username"
+                           onkeyup="this.value=this.value.replace(/[^\w_]/g,'');"></td>
+            </tr>
+
+            <tr>
+                <td><label for="pass">用户密码</label></td>
+                <td><input id="pass" type="password" required="required" maxlength="20" name="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="登陆" id="submit"><input type="reset" value="重置"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><a href="update_user.html">忘记了你的用户名或者密码</a></td>
+            </tr>
+        </table>
+
+        <!--<label>用户名称&nbsp;&nbsp<input type="text" placeholder="用户名称"></label><br><br>-->
+        <!--<label>用户密码&nbsp;&nbsp<input type="password" placeholder="用户密码"></label>-->
+        <!--<input type="submit" value="保存">-->
+        <!--<input type="reset" value="重置">-->
+    </fieldset>
+
+</form>
+
+</body>
+</html>

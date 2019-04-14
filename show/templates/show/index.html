@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+
+        $(function () {
+
+
+            $("#begin_log").click(function () {
+
+                $.ajax({
+                    url: 'submit/',
+                    type: 'POST',
+                    data: {"data": "past"},
+                    success: function (callback) {
+                        alert("批量执行成功");
+                        console.log(callback);
+                    },
+
+                    error: function (data) {
+                        alert(JSON.stringify(data));//弹窗
+                        $('#result').text("图片下载失败");
+                    }
+
+                })
+
+
+            });
+
+
+            $("#send_email").click(function () {
+
+
+                $.ajax({
+                    url: 'send_email/',
+                    type: 'GET',
+                    data: {},
+                    success: function (callback) {
+                        console.log(callback);
+
+                    },
+
+                    error: function (data) {
+                        console.log(data);//弹窗
+
+                    }
+
+                })
+
+
+            })
+
+
+        });
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+<h1>京北方公司日志系统1</h1>
+
+{% csrf_token %}
+
+<label for="begin_log">手动跑批日志按钮：</label>
+
+<input type="button" value="手动跑批日志" id="begin_log"><br><br>
+
+<label for="send_email">手动发送邮件按钮：</label>
+
+<input type="button" value="手动发送邮件" id="send_email"><br>
+
+
+<p>{{ rlt }}</p>
+</body>
+
+
+</html>
